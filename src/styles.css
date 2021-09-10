@@ -129,3 +129,11 @@ ul {
   color: #035397;
   font-weight: 600;
 }
+
+.credit {
+  text-align: center;
+  color: #035397;
+  font-weight: 300;
+  font-size: 14px;
+  margin: 10px;
+}
