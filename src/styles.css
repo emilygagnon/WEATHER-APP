@@ -98,6 +98,18 @@ ul {
   top: -90px;
 }
 
+.units .hover {
+  color: #035397;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.units .active {
+  color: #001e6c;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 .current-weather-img {
   max-width: 100%;
   margin: 0;
