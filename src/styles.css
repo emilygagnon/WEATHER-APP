@@ -128,7 +128,7 @@ ul {
   right: 100px;
 }
 
-.weekday {
+.weather-forecast-date {
   text-align: center;
   margin: 0;
   color: #035397;
@@ -140,10 +140,15 @@ ul {
   max-width: 40px;
 }
 
-.forecast-weather {
+.weather-forecast-temperatures {
   text-align: center;
   color: #035397;
   font-weight: 600;
+  padding-bottom: 15px;
+}
+
+.weather-forecast-temperature-min {
+  font-weight: 300;
 }
 
 .credit {
