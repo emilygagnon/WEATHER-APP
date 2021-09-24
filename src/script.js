@@ -1,6 +1,6 @@
 // Time & day feature
 function formatDate(now) {
-  let days = [
+  let weekdays = [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -25,7 +25,7 @@ function formatDate(now) {
     "December",
   ];
 
-  let day = days[now.getDay()];
+  let day = weekdays[now.getDay()];
   let month = months[now.getMonth()];
   let date = now.getDate();
   let hours = now.getHours();
@@ -39,6 +39,36 @@ function formatDate(now) {
   let year = now.getFullYear();
 
   return `${day} ${month} ${date}, ${hours}:${minutes}, ${year}`;
+}
+
+//Forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thursday", "Friday", "Saturday", "Sunday", "Monday", "Tuesday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+        <div class="col-2">
+          <div class="weather-forecast-date">${day}</div>
+           <img
+                  class="forecast-imgs"
+                  src="http://openweathermap.org/img/wn/50d@2x.png"
+                  alt=""
+                  width="42"
+                />
+        <div class="weather-forecast-temperatures">
+                  <span class="weather-forecast-temperature-max"> 18° </span>
+                  <span class="weather-forecast-temperature-min"> 12° </span>
+                </div>
+        </div>
+    `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 // Get city + temperature feature
@@ -130,3 +160,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 searchCity("Quebec");
+displayForecast();
