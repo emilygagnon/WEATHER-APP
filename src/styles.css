@@ -29,7 +29,8 @@ input {
 
 ul {
   font-size: 14px;
-  padding: 0px 0px 10px 10px;
+  padding: 60px 0px 0px 10px;
+  margin: 0;
   color: #035397;
   list-style: none;
 }
@@ -107,18 +108,6 @@ ul {
   font-size: 25px;
   position: relative;
   top: -60px;
-}
-
-.units .hover {
-  color: #035397;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.units .active {
-  color: #001e6c;
-  font-weight: bold;
-  text-decoration: none;
 }
 
 #icon {
